@@ -1,0 +1,108 @@
+$teaser-light-color: #fff;
+$teaser-dark-color: $text-color;
+
+.cmp-teaser {
+  .cmp-teaser__pretitle {
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: $font-size-small;
+  }
+
+  .cmp-teaser__content {
+    float: left;
+    padding: 1rem 0;
+  }
+
+  .cmp-teaser__title {
+    font-family: $font-family-serif;
+    margin: 0.5em 0;
+    color: $teaser-dark-color;
+  }
+
+  .cmp-teaser__title-link {
+    color: $teaser-dark-color;
+    &::after { content: none; }
+  }
+
+  .cmp-teaser__description {
+    font-size: $font-size-base;
+    margin: 0;
+    line-height: 1.75;
+
+    p {
+      line-height: 1.75;
+      font-size: $font-size-base;
+    }
+  }
+
+  .cmp-teaser__action-container {
+    margin: 1em 0;
+    float: left;
+    display: flex;
+    gap: 1em;
+  }
+
+  .cmp-teaser__action-link {
+    background-color: $brand-primary;
+    text-transform: uppercase;
+    font-size: $font-size-small;
+    padding: 1em 2.5em;
+    font-weight: $font-weight-bold;
+    color: $text-color;
+    float: left;
+    border-radius: $button-border-radius;
+    text-decoration: none;
+
+    &:hover { opacity: 0.9; text-decoration: none; }
+  }
+
+  .cmp-teaser__image {
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-height: 500px;
+      object-fit: cover;
+    }
+  }
+
+  // Hero variant
+  &.cmp-teaser--hero {
+    position: relative;
+
+    .cmp-teaser__image {
+      img {
+        max-height: 600px;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .cmp-teaser__content {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      background: rgba($white, 0.9);
+      padding: 2rem;
+      max-width: 600px;
+      float: none;
+    }
+  }
+
+  // Card variant
+  &.cmp-teaser--card {
+    background: $white;
+    @include boxShadow();
+
+    .cmp-teaser__content {
+      float: none;
+      padding: 1rem;
+    }
+
+    .cmp-teaser__image img {
+      max-height: 200px;
+      object-fit: cover;
+    }
+  }
+}

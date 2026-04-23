@@ -1,0 +1,38 @@
+.cmp-tabs {
+  .cmp-tabs__tablist {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+  }
+
+  .cmp-tabs__tab {
+    font-size: $font-size-small;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    max-height: $button-size;
+    min-width: $button-size;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background: none;
+    cursor: pointer;
+
+    &:focus { outline: none; }
+    &:hover { background-color: $gray-light; }
+  }
+
+  .cmp-tabs__tab--active {
+    background-color: $black;
+    color: $white;
+    border-color: inherit;
+  }
+
+  .cmp-tabs__tabpanel {
+    display: none;
+    padding: 1rem 0;
+
+    &--active { display: block; }
+  }
+}

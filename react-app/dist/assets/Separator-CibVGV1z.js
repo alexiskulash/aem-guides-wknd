@@ -1,0 +1,1 @@
+import{j as r}from"./index-CsFtQWdM.js";function e({className:a=""}){return r.jsx("div",{className:`cmp-separator ${a}`,children:r.jsx("hr",{className:"cmp-separator__horizontal-rule"})})}export{e as default};

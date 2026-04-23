@@ -1,0 +1,46 @@
+$icomoon-font-family: "wknd-icon-font" !default;
+$icomoon-font-path:   "fonts" !default;
+
+$wkndicon-menu:         "\e916";
+$wkndicon-google:       "\e900";
+$wkndicon-twitter:      "\e901";
+$wkndicon-facebook:     "\e902";
+$wkndicon-instagram:    "\e903";
+$wkndicon-social-share: "\e904";
+$wkndicon-map:          "\e905";
+$wkndicon-alert:        "\e906";
+$wkndicon-download:     "\e907";
+$wkndicon-info:         "\e908";
+$wkndicon-email:        "\e909";
+$wkndicon-comment:      "\e90a";
+$wkndicon-share:        "\e90b";
+$wkndicon-user:         "\e90c";
+$wkndicon-home:         "\e90d";
+$wkndicon-right-arrow:  "\e90e";
+$wkndicon-left-arrow:   "\e90f";
+$wkndicon-minus:        "\e910";
+$wkndicon-plus:         "\e911";
+$wkndicon-location:     "\e912";
+$wkndicon-search:       "\e913";
+$wkndicon-delete:       "\e914";
+$wkndicon-cart:         "\e915";
+$wkndicon-lock:         "\e98f";
+$wkndicon-unlocked:     "\e990";
+$wkndicon-play3:        "\ea1c";
+
+@mixin wkndiconstyle() {
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 1.25rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class$="__icon"], [class*="__icon"], [class$="-icon"], [class*="-icon"] {
+  @include wkndiconstyle();
+}

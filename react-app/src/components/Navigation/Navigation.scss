@@ -1,0 +1,108 @@
+.cmp-navigation {
+  padding-top: 15px;
+}
+
+.cmp-navigation__group {
+  list-style: none;
+  margin: 0;
+  padding-inline-start: 0;
+}
+
+.cmp-navigation__item {
+  display: block;
+  float: left;
+  position: relative;
+
+  &:hover > .cmp-navigation__group {
+    display: block;
+  }
+}
+
+.cmp-navigation__item--level-1 > .cmp-navigation__item-link {
+  display: none;
+}
+
+.cmp-navigation__item--level-2 {
+  .cmp-navigation__group {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: $white;
+    min-width: 180px;
+    z-index: 100;
+    @include boxShadow();
+  }
+
+  &:hover > .cmp-navigation__group {
+    display: block;
+  }
+}
+
+.cmp-navigation__item-link {
+  color: $text-color;
+  font-size: $font-size-small;
+  text-transform: uppercase;
+  padding: 15px 17px;
+  text-decoration: none;
+  display: block;
+
+  &:hover,
+  &:focus {
+    background-color: $brand-primary;
+    text-decoration: none;
+  }
+}
+
+// Mobile toggle button
+.cmp-navigation__mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 1.5rem;
+
+  @media (max-width: $screen-medium) {
+    display: block;
+  }
+}
+
+// Hide desktop nav on mobile
+.cmp-navigation__desktop {
+  @media (max-width: $screen-medium) {
+    display: none;
+  }
+}
+
+// Mobile overlay nav
+.cmp-navigation--mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100vh;
+  background: $white;
+  z-index: 2000;
+  padding: 2rem 1rem;
+  overflow-y: auto;
+  @include boxShadow();
+  @include animated();
+  @include fadeIn();
+
+  .cmp-navigation__group {
+    display: block;
+  }
+
+  .cmp-navigation__item {
+    float: none;
+    width: 100%;
+  }
+
+  .cmp-navigation__item--level-1 > .cmp-navigation__item-link {
+    display: block;
+    font-size: $font-size-base;
+    padding: 12px 0;
+    border-bottom: 1px solid $gray-light;
+  }
+}

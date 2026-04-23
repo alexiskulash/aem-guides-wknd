@@ -1,0 +1,154 @@
+// Reset
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+@import 'globals';
+
+// WKND Icon Font (font-face declared once here)
+@font-face {
+  font-family: 'wknd-icon-font';
+  src:
+    url('fonts/wknd-icon-font.ttf') format('truetype'),
+    url('fonts/wknd-icon-font.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+// Base Elements
+body {
+  background-color: $body-bg;
+  font-family: $font-family-base;
+  margin: 0;
+  padding: 0;
+  font-size: $font-size-base;
+  text-align: left;
+  color: $text-color;
+  line-height: $line-height-base;
+}
+
+.root {
+  max-width: $max-body-width;
+  margin: 0 auto;
+  padding-top: $header-height;
+
+  @media (max-width: $screen-medium) {
+    padding-top: $header-mobile-height;
+  }
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  line-height: $line-height-base;
+  color: $text-color;
+}
+
+h1, h2, h3 {
+  font-family: $font-family-serif;
+  font-weight: $font-weight-normal;
+  margin-top: 27px;
+  margin-bottom: 13px;
+}
+
+h4, h5, h6 {
+  font-family: $font-family-sans-serif;
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+}
+
+h1 { font-size: $font-size-h1; }
+h2 { font-size: $font-size-h2; }
+h3 { font-size: $font-size-h3; }
+h4 { font-size: $font-size-h4; }
+h5 { font-size: $font-size-h5; }
+h6 { font-size: $font-size-h6; }
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+h1 a, h2 a, h3 a {
+  color: $text-color;
+}
+
+p {
+  margin: 0 0 13px;
+  font-size: $font-size-base;
+  line-height: $line-height-base + 1;
+  text-align: justify;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+// Experience Fragment Header
+.experiencefragment.cmp-experiencefragment--header {
+  z-index: 1030;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// Experience Fragment Footer
+.experiencefragment.cmp-experiencefragment--footer {
+  background-color: $black;
+  color: $gray-light;
+  padding: 1rem 0 1.5rem;
+  margin-top: 3rem;
+}
+
+// Layout container header
+.cmp-layoutcontainer--header {
+  background-color: $body-bg;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  transition: padding 0.3s ease;
+
+  .aem-Grid {
+    @include container-content();
+  }
+
+  @media (max-width: $screen-medium) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.scrolly .cmp-layoutcontainer--header {
+  @include boxShadow();
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+// Chevron utility class
+.chevron::before {
+  border-style: solid;
+  border-width: 0.15em 0.15em 0 0;
+  content: '';
+  display: inline-block;
+  height: 0.45em;
+  left: 0.15em;
+  position: relative;
+  top: 0.15em;
+  transform: rotate(-45deg);
+  vertical-align: top;
+  width: 0.45em;
+}
+.chevron.right:before  { left: 0; transform: rotate(45deg); }
+.chevron.bottom:before { top: 0; transform: rotate(135deg); }
+.chevron.left:before   { left: 0.25em; transform: rotate(-135deg); }

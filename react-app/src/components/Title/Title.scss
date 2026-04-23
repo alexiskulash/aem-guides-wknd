@@ -1,0 +1,14 @@
+.cmp-title {
+  .cmp-title__text {
+    // inherits heading styles from global elements
+  }
+
+  .cmp-title__link {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

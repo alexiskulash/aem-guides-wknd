@@ -1,0 +1,23 @@
+.cmp-form-button {
+  .cmp-form-button__button {
+    background-color: $brand-primary;
+    color: $text-color;
+    border: none;
+    padding: 0 1.5em;
+    height: $button-size;
+    font-size: $font-size-small;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: $button-border-radius;
+
+    &:hover:not(:disabled) {
+      opacity: 0.9;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+}

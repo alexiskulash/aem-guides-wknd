@@ -1,0 +1,25 @@
+.cmp-pdfviewer {
+  width: 100%;
+  margin: 1rem 0;
+
+  .cmp-pdfviewer__iframe {
+    width: 100%;
+    border: 1px solid $gray-light;
+  }
+
+  .cmp-pdfviewer__download {
+    margin-top: 0.5rem;
+    text-align: right;
+  }
+
+  .cmp-pdfviewer__download-link {
+    font-size: $font-size-small;
+    color: $link-color;
+
+    &::before {
+      @include wkndiconstyle();
+      content: $wkndicon-download;
+      margin-right: 0.25em;
+    }
+  }
+}

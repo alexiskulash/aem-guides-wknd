@@ -1,0 +1,30 @@
+.cmp-container {
+  width: 100%;
+}
+
+.cmp-layoutcontainer--fixed-width .aem-Grid {
+  @include container-content();
+}
+
+.cmp-layoutcontainer--utility {
+  min-height: $utility-nav-height;
+  background-color: $black;
+  color: $gray-lighter;
+  font-size: $font-size-small;
+
+  a {
+    color: $gray-light;
+    font-size: $font-size-small;
+    text-transform: uppercase;
+  }
+}
+
+.cmp-layoutcontainer--footer {
+  background-color: $black;
+  color: $gray-lighter;
+
+  .cmp-text {
+    p { line-height: 1.25; }
+    a { color: $gray-lighter; text-decoration: underline; }
+  }
+}

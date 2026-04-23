@@ -1,0 +1,22 @@
+.cmp-experience-fragment--contributor {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+
+  .cmp-title__text {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+
+  .cmp-image {
+    .cmp-image__image {
+      border-radius: 50%;
+      height: 164px;
+      width: 164px;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.wknd-sign-in-form {
+  max-width: 400px;
+
+  .wknd-sign-in-form__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .wknd-sign-in-form__error {
+    color: $pink;
+    font-size: $font-size-small;
+    margin: 0;
+  }
+}

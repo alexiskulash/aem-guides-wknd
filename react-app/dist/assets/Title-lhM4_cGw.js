@@ -1,0 +1,1 @@
+import{j as e}from"./index-CsFtQWdM.js";function r({text:t,type:a="h2",link:s,className:c=""}){const i=a;return e.jsx("div",{className:`cmp-title ${c}`,children:e.jsx(i,{className:"cmp-title__text",children:s?e.jsx("a",{className:"cmp-title__link",href:s,children:t}):t})})}export{r as default};

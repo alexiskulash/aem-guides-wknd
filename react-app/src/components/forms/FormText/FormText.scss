@@ -1,0 +1,35 @@
+.cmp-form-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  .cmp-form-text__label {
+    font-size: $font-size-small;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    color: $text-color;
+  }
+
+  .cmp-form-text__required {
+    color: $pink;
+  }
+
+  .cmp-form-text__text {
+    padding: 0.5em 0.75em;
+    border: 1px solid $gray-light;
+    font-size: $font-size-base;
+    font-family: $font-family-base;
+    width: 100%;
+    height: $button-size;
+
+    &:focus {
+      outline: none;
+      border-color: $brand-primary;
+    }
+
+    &--error {
+      border-color: $pink;
+      background-color: lighten(#FF0058, 45%);
+    }
+  }
+}

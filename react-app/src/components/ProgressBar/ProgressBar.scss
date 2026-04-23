@@ -1,0 +1,31 @@
+.cmp-progressbar {
+  margin: 1rem 0;
+
+  .cmp-progressbar__label {
+    display: block;
+    font-size: $font-size-small;
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    margin-bottom: 0.25rem;
+  }
+
+  .cmp-progressbar__track {
+    background-color: $gray-light;
+    height: 8px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .cmp-progressbar__fill {
+    background-color: $brand-primary;
+    height: 100%;
+    transition: width 0.3s ease;
+  }
+
+  .cmp-progressbar__value {
+    font-size: $font-size-xsmall;
+    color: $gray;
+    margin-top: 0.25rem;
+    display: block;
+  }
+}

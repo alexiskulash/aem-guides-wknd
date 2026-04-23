@@ -1,0 +1,29 @@
+.cmp-button {
+  display: inline-block;
+
+  .cmp-button__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    background-color: $brand-primary;
+    color: $text-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: $font-size-small;
+    font-weight: $font-weight-bold;
+    padding: 0 1.5em;
+    height: $button-size;
+    line-height: $button-size;
+    border-radius: $button-border-radius;
+
+    &:hover {
+      text-decoration: none;
+      opacity: 0.9;
+    }
+  }
+
+  &.cmp-button--secondary .cmp-button__link {
+    background-color: $black;
+    color: $white;
+  }
+}

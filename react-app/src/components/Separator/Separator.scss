@@ -1,0 +1,11 @@
+.cmp-separator {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.cmp-separator__horizontal-rule {
+  border-width: 1px;
+  border-style: solid;
+  border-color: $gray-light;
+  background-color: $gray-light;
+}

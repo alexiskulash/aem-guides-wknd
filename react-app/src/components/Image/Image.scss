@@ -1,0 +1,22 @@
+.cmp-image {
+  .cmp-image__image {
+    margin-top: 7px;
+    margin-bottom: 7px;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .cmp-image__title {
+    text-transform: uppercase;
+    font-size: $font-size-small;
+    margin-top: -0.25em;
+    float: left;
+    font-family: $font-family-sans-serif;
+    font-weight: $font-weight-bold;
+  }
+
+  .cmp-image__link {
+    display: block;
+  }
+}

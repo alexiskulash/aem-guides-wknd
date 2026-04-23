@@ -1,0 +1,39 @@
+.cmp-list {
+  float: left;
+  padding: 0;
+  width: 100%;
+
+  .cmp-list__item {
+    list-style: none;
+    float: left;
+    width: 100%;
+    margin-bottom: 1em;
+
+    &::before { content: none; position: unset; }
+  }
+
+  .cmp-list__item-link {
+    font-weight: 600;
+    float: left;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: $text-color;
+    width: 100%;
+
+    &:hover .cmp-list__item-title {
+      text-decoration: underline;
+    }
+  }
+
+  .cmp-list__item-title {
+    width: 100%;
+    float: left;
+  }
+
+  .cmp-list__item-date {
+    width: 100%;
+    float: left;
+    color: $gray;
+    font-size: $font-size-small;
+  }
+}
